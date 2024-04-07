@@ -14,13 +14,12 @@ class RuleGenerator:
         # Load dataset
         dataset = self.load_dataset(self.dataset_path)
 
-        # Preprocess dataset if needed
+        # Preprocess dataset if we needed
         # dataset = self.preprocess_dataset(dataset)
 
-        # Feature selection if needed
+        # Feature selection if we needed
         # dataset = self.feature_selection(dataset)
 
-        # Convert dataset to appropriate format
 
         # Initialize NSGA-II algorithm
         nsga2 = NSGA2(self.population_size, self.num_generations, 11)
@@ -33,19 +32,16 @@ class RuleGenerator:
 
     def load_dataset(self, dataset_path):
         # Load dataset from file
-        # Example usage of pandas to load dataset
         import pandas as pd
         dataset = pd.read_csv(dataset_path)
         return dataset
 
     def preprocess_dataset(self, dataset):
         # Perform data preprocessing tasks
-        # For example: handling missing values, scaling features, encoding categorical variables, etc.
         return dataset
 
     def feature_selection(self, dataset):
         # Perform feature selection tasks
-        # For example: selecting a subset of relevant features from the dataset
         return dataset
 
     def save_rules(self, output_path, rules):
